@@ -1,0 +1,15 @@
+#!/bin/bash
+
+GOGS_VERSION="0.9"
+GOGS_VERSION_FULL="0.9.113" # 01/17/20176
+GOGS_TARBALL_DIR=src/gogs${GOGS_VERSION}
+GOGS_TARBALL_FILE=${GOGS_TARBALL_DIR}/gogs_${GOGS_VERSION}.tar.gz
+GOGS_TARBALL_DOWNLOAD_URL=https://dl.gogs.io/gogs_v${GOGS_VERSION_FULL}_linux_386.tar.gz
+
+if [ ! -f ${GOGS_TARBALL_FILE} ]; then
+  mkdir -p ${GOGS_TARBALL_DIR}
+  echo "Downloading gogs version ${GOGS_VERSION} tarball"
+  wget ${GOGS_TARBALL_DOWNLOAD_URL} -O ${GOGS_TARBALL_FILE}
+else
+  echo "Detected gogs tarball. Not downloading."
+fi

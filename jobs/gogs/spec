@@ -1,0 +1,7 @@
+---
+name: gogs
+templates:
+  ctl.erb: bin/ctl
+
+packages:
+  - gogs

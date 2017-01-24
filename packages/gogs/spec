@@ -1,0 +1,7 @@
+---
+name: gogs
+
+dependencies:
+
+files:
+  - gogs/gogs_0.9.tar.gz
